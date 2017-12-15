@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title>腾讯视频</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no">
+    <script src="./dist/jd_activity.js"></script>
+</head>
+<body id="app">
+
+<script>
+    var activityID='TbpTJEmLfV4vTRE9SLU5ojPFvmv';
+    var moduleId='sKcUvcGnf4kKxruvjDdwAWmCXmM';
+    function callback(obj) {
+        console.log(obj);
+        /*
+        *
+         接口调用是否成功
+         -1：后台处理异常
+         0：成功
+         1：失败
+         3: 未登录
+
+         0：处理成功
+         1-1:活动未开始
+         1-2:活动已结束
+         1-3：活动已下线
+         1-4:活动id有误
+         1-5:组件id有误
+         3-1:用户等级不符合
+         3-2:用户风险等级不符合
+         4-3:当天可领次数不足
+         4-2:总可领次数不足
+         5-1:无可领取奖品
+         5-2:总库存不足
+         5-3:当前时间库存不足
+         6-1:发送频率限制次数不足
+         7-1:上游发券接口发券失败，或领券接口降级开关打开+发券太频繁
+         */
+    }
+    function error() {
+
+    }
+    JDActivity.getTiket(activityID,moduleId,callback,error)
+</script>
+</body>
+</html>
