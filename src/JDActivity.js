@@ -19,7 +19,7 @@ function getCookie(name) {
 JDActivity.prototype.init = function (config) {
 
 };
-JDActivity.getTiket = function (activityId,moduleId,callback,error) {
+JDActivity.babelAwardCollection = function (activityId,moduleId,callback,error) {
 
     let url = 'http://h5.m.jd.com/h5api.jsp';
     let data = {};
