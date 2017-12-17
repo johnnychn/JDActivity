@@ -4,16 +4,19 @@ jquery 1.0+
 
 
 ### 用法
-···javascript
+```javascript
 var jda=new JDActivity('3f354432be41f1e805c00c8a10fc2af5');
 jda.babelAwardCollection(activityID,moduleId,callback,error)
-    
+``` 
 ### Methods
 
 
 <table>
 <tr>
 <td>名称</td><td>参数 </td><td>说明</td>
+</tr>
+<tr>
+<td>JDActivity</td><td>sid </td><td>默认sid，优先读取cookie中的值</td>
 </tr>
 <tr>
 <td>babelAwardCollection(activityID,moduleId,callback,error)</td>

@@ -24,6 +24,9 @@ JDActivity.prototype.babelAwardCollection = function (activityId,moduleId,callba
     data.clientVersion='1.0.0';
     data.body=JSON.stringify(activity);
     data.sid=this.getCookie('sid')||this.sid;
+    if(!data.sid){
+        console.log('>>无法读取cookie中的sid,测试请填写测试sid')
+    }
     $.ajax({
         url:url,
         type:'get',
