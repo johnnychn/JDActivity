@@ -3,17 +3,18 @@
  * JD 活动API
  */
 
-var $=require('jquery');
-function JDActivity(config) {
+let $=require('jquery');
+let JDActivity=function (sid) {
+    this.sid=sid;
 }
-function getCookie(name) {
+JDActivity.prototype.getCookie=function(name) {
     let arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
     if (arr = document.cookie.match(reg))
         return decodeURI(arr[2]);
     else
         return null;
 }
-JDActivity.babelAwardCollection = function (activityId,moduleId,callback,error) {
+JDActivity.prototype.babelAwardCollection = function (activityId,moduleId,callback,error) {
 
     let url = 'http://h5.m.jd.com/h5api.jsp';
     let data = {};
@@ -22,7 +23,7 @@ JDActivity.babelAwardCollection = function (activityId,moduleId,callback,error) 
     data.client='wh5'
     data.clientVersion='1.0.0';
     data.body=JSON.stringify(activity);
-    data.sid=getCookie('sid')||'3f354432be41f1e805c00c8a10fc2af5';
+    data.sid=this.getCookie('sid')||this.sid;
     $.ajax({
         url:url,
         type:'get',
@@ -30,8 +31,6 @@ JDActivity.babelAwardCollection = function (activityId,moduleId,callback,error) 
         dataType: "jsonp",
         jsonpCallback:"getResult",//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名，也可以不写这个参数，jQuery会自动为你处理数据
         success: callback||function (data) {
-
-
         },
         error: error||function(){
         }

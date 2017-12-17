@@ -16,7 +16,7 @@
     function callback(obj) {
         console.log(obj);
         /*
-        *
+        * code
          接口调用是否成功
          -1：后台处理异常
          0：成功
@@ -43,7 +43,8 @@
     function error() {
 
     }
-    JDActivity.babelAwardCollection(activityID,moduleId,callback,error)
+    var jda=new JDActivity('3f354432be41f1e805c00c8a10fc2af5');
+    jda.babelAwardCollection(activityID,moduleId,callback,error)
 </script>
 </body>
 </html>

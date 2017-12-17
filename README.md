@@ -3,8 +3,11 @@
 jquery 1.0+
 
 
-
-
+### 用法
+···javascript
+var jda=new JDActivity('3f354432be41f1e805c00c8a10fc2af5');
+jda.babelAwardCollection(activityID,moduleId,callback,error)
+    
 ### Methods
 
 
