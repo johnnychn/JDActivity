@@ -16,7 +16,7 @@ jda.babelAwardCollection(activityID,moduleId,callback,error)
 <td>名称</td><td>参数 </td><td>说明</td>
 </tr>
 <tr>
-<td>JDActivity</td><td>sid </td><td>默认sid，优先读取cookie中的值</td>
+<td>new JDActivity(sid)</td><td>sid:String </td><td>默认sid，优先读取cookie中的值</td>
 </tr>
 <tr>
 <td>babelAwardCollection(activityID,moduleId,callback,error)</td>
