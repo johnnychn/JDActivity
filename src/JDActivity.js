@@ -19,7 +19,7 @@ JDActivity.prototype.getCookie=function(name) {
 }
 JDActivity.prototype.babelAwardCollection = function (activityId,moduleId,callback,error) {
 
-    let url = 'http://h5.m.jd.com/h5api.jsp';
+    let url = '//h5.m.jd.com/h5api.jsp';
     let data = {};
     let activity={activityId:activityId,moduleId:moduleId};
     data.functionid = 'babelAwardCollection';

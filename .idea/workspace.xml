@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3282c788-62af-42f5-9a6f-692475b122b6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/jd_activity.js" afterPath="$PROJECT_DIR$/dist/jd_activity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/jd_activity.js.map" afterPath="$PROJECT_DIR$/dist/jd_activity.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JDActivity.js" afterPath="$PROJECT_DIR$/src/JDActivity.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -42,8 +40,8 @@
       <file leaf-file-name="JDActivity.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JDActivity.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+            <state relative-caret-position="450">
+              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -237,12 +235,12 @@
       <updated>1513335442199</updated>
       <workItem from="1513335443532" duration="7021000" />
       <workItem from="1513467738629" duration="502000" />
-      <workItem from="1513468298789" duration="5021000" />
+      <workItem from="1513468298789" duration="5121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12544000" />
+    <option name="totallyTimeSpent" value="12644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1018" y="28" width="1839" height="1244" extended-state="0" />
@@ -490,8 +488,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JDActivity.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        <state relative-caret-position="450">
+          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding />
         </state>
       </provider>
