@@ -5,8 +5,6 @@
 
 var $=require('jquery');
 function JDActivity(config) {
-
-    this.init(config|{});
 }
 function getCookie(name) {
     let arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
@@ -15,10 +13,6 @@ function getCookie(name) {
     else
         return null;
 }
-
-JDActivity.prototype.init = function (config) {
-
-};
 JDActivity.babelAwardCollection = function (activityId,moduleId,callback,error) {
 
     let url = 'http://h5.m.jd.com/h5api.jsp';
