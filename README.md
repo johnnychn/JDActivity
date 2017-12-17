@@ -1,11 +1,11 @@
-# Dependencies
+### Dependencies
 
 jquery 1.0+
 
 
 
 
-# Methods
+### Methods
 
 
 <table>
