@@ -3,7 +3,10 @@
  * JD 活动API
  */
 
-let $=require('jquery');
+let $=window.jQuery;
+if(!$){
+    console.log('JDActivity require jquery')
+}
 let JDActivity=function (sid) {
     this.sid=sid;
 }
