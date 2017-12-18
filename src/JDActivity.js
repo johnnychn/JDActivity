@@ -7,8 +7,8 @@ let $=window.jQuery;
 if(!$){
     console.log('JDActivity require jquery')
 }
-let JDActivity=function (sid) {
-    this.sid=sid;
+let JDActivity=function (config) {
+    this.config=config||{};
 }
 JDActivity.prototype.getCookie=function(name) {
     let arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
@@ -30,6 +30,7 @@ JDActivity.prototype.babelAwardCollection = function (activityId,moduleId,callba
     if(!data.sid){
         console.log('>>无法读取cookie中的sid,测试请填写测试sid')
     }
+
     $.ajax({
         url:url,
         type:'get',
@@ -44,6 +45,31 @@ JDActivity.prototype.babelAwardCollection = function (activityId,moduleId,callba
 
     //'http://h5.m.jd.com/h5api.jsp?functionid=babelAwardCollection&client=wh5&clientVersion=1.0.0&body=%7b%22activityId%22:%22TbpTJEmLfV4vTRE9SLU5ojPFvmv%22,
     // %22moduleId%22:%22sKcUvcGnf4kKxruvjDdwAWmCXmM%22%7d&callback=j&sid=6fefc1c334b2c2b525110557e6f09506')
+};
+
+
+
+JDActivity.prototype.newBabelAwardCollection=function (award,callback,error) {
+    $.ajax({
+        url: '//api.m.jd.com/client.action',
+        dataType: 'jsonp',
+        jsonpCallback:"drawCallback",
+        data: {
+            functionId: 'newBabelAwardCollection',
+            client: 'wh5',
+            clientVersion: '1.0.0',
+            'sid': this.getCookie('sid')||this.config.sid,
+            'uuid': this.getCookie('uuid')||this.config.uuid,
+
+            body: JSON.stringify({
+                'activityId': award.activityId,
+                'scene': '1',
+                'args': 'key=' + award.key + ',roleId=' + award.roleId + ',to=' + award.to
+            })
+        },
+        success:callback||function (data) {},
+        error: error||function(){}
+    })
 }
 
 

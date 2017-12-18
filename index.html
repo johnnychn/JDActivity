@@ -12,40 +12,36 @@
 <body id="app">
 
 <script>
-    var activityID='TbpTJEmLfV4vTRE9SLU5ojPFvmv';
-    var moduleId='cdf1zrCrYpuaK1UDbkWTZapYVLG';
+    var activityID = 'TbpTJEmLfV4vTRE9SLU5ojPFvmv';
     function callback(obj) {
         console.log(obj);
-        /*
-        * code
-         接口调用是否成功
-         -1：后台处理异常
-         0：成功
-         1：失败
-         3: 未登录
 
-         0：处理成功
-         1-1:活动未开始
-         1-2:活动已结束
-         1-3：活动已下线
-         1-4:活动id有误
-         1-5:组件id有误
-         3-1:用户等级不符合
-         3-2:用户风险等级不符合
-         4-3:当天可领次数不足
-         4-2:总可领次数不足
-         5-1:无可领取奖品
-         5-2:总库存不足
-         5-3:当前时间库存不足
-         6-1:发送频率限制次数不足
-         7-1:上游发券接口发券失败，或领券接口降级开关打开+发券太频繁
-         */
     }
     function error() {
 
     }
-    var jda=new JDActivity('3f354432be41f1e805c00c8a10fc2af5');
-    jda.babelAwardCollection(activityID,moduleId,callback,error)
+    var jda = new JDActivity({});
+
+    var drawData = {
+        activityId: activityID,//项目ID
+        key: '9a8d48a8e0fb4759a16773eae6c208c0', //券Key
+        roleId: '9381670',//券roleId
+        to: '//h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/index.html' //项目地址
+            };
+
+
+    //类型  key    roleId
+
+    //手机  暂无   暂无
+    //电脑  0065f75ec0f84947972d5d746c79b422   9380662
+    //数码  9a8d48a8e0fb4759a16773eae6c208c0   9381670
+    //图书  eae983506795449798bf77aba99f92a1   8522473
+    //生旅  c3ca887e4b354555b5df3ead016e9ccd   9639233
+    //办公  暂无   暂无
+
+    jda.newBabelAwardCollection(drawData, callback);
+
+
 </script>
 </body>
 </html>
