@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <style>
+        h4 {
+            margin-top: 50px;
+        }
+
+        select {
+            height: 45px;
+        }
+
+        option {
+            height: 45px;
+        }
+
+        .btn {
+            margin-bottom: 10px;
+        }
+
+        label.checkbox {
+            padding: 10px 0;
+        }
+    </style>
+    <title>app5.0分享协议</title>
+</head>
+<body>
+<div id="log"></div>
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>唤起分享面板</h4>
+
+            <p>
+                <a href="javascript:;" class="btn btn-info btn-lg callSharePanel" channels="">默认全部</a>
+                <a href="javascript:;" class="btn btn-info btn-lg callSharePanel"
+                   channels="Wxfriends,Wxmoments,Sinaweibo">wx好友,wx朋友圈,微博</a>
+                <a href="javascript:;" class="btn btn-info btn-lg callSharePanel" channels="QQfriends,QQzone,CopyURL">QQ好友,QQzone,CopyURL</a>
+            </p>
+
+        </div>
+    </div>
+</div>
+<script src="js/jdShare.js"></script>
+<script src="js/zepto.js"></script>
+<script>
+    $('.callSharePanel').click(function () {
+        alert('clicked window.jdShare=' + window.jdShare)
+        var $this = $(this);
+        var channels = $this.attr('channels');
+        try {
+            window.jdShare && jdShare.callSharePane({
+                title: '京东超市，天天低价抢购！',
+                content: '每日京喜好货，都在京东超市天天抢购！早市、午市、晚市，三个时段，不让品质低价偷偷溜走！',
+                url: 'http://h5.m.jd.com/active/rushbuying/index.html',
+                img: 'http://m.360buyimg.com/n1/s120x120_jfs/t2566/341/1119128176/23675/6356333b/568e3d86Naa36a750.jpg',
+                channel: channels,
+                callback: null  // 不要依赖回调，不要在回调中加入业务逻辑，不要在回调中处理耗时的操作
+            });
+        } catch (e) {
+            if (e.name === "JdShareException") {
+                alert(e.toString());
+            } else {
+                alert(e.message)
+            }
+        }
+    })
+</script>
+</body>
+</html>

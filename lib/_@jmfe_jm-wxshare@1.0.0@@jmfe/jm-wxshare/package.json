@@ -1,0 +1,28 @@
+{
+  "name": "@jmfe/jm-wxshare",
+  "version": "1.0.0",
+  "description": "微信webview内分享组件",
+  "main": "lib/index.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jd",
+    "jmfe",
+    "微信分享"
+  ],
+  "author": "Zhao Yue <zhaoyue3@jd.com>",
+  "maintainers": [
+    "zhao Yue <zhaoyue3@jd.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.jd.com:jmfe-packages/jm-wxshare.git"
+  },
+  "license": "MIT",
+  "_from": "@jmfe/jm-wxshare@1.0.0",
+  "_resolved": "http://registry.m.jd.com/@jmfe/jm-wxshare/download/@jmfe/jm-wxshare-1.0.0.tgz"
+}

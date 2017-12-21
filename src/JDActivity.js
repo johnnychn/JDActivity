@@ -1,45 +1,92 @@
-
 /**
  * JD 活动API
  */
 
-let $=window.jQuery;
-if(!$){
+let $ = window.jQuery;
+let jm_wxshare = require('../lib/_@jmfe_jm-wxshare@1.0.0@@jmfe/jm-wxshare/lib/index.js');
+let jdshare = require('../lib/_@jmfe_jm-jdshare@1.4.1@@jmfe/jm-jdshare/lib/jdShare.js');
+window.jdShare=jdshare;
+
+if (!$) {
     console.log('JDActivity require jquery')
 }
-let JDActivity=function (config) {
-    this.config=config||{};
+let JDActivity = function (config) {
+    this.config = config || {};
 }
-JDActivity.prototype.getCookie=function(name) {
+
+JDActivity.prototype.wechatShareInit = function (obj) {
+    jm_wxshare.init(obj);
+};
+
+JDActivity.prototype.setShareInfo = function (obj,callback) {
+    obj.callback=callback||null;
+    try {
+        window.jdShare && jdShare.setShareInfo(obj);
+    } catch (e) {
+        if (e.name === "JdShareException") {
+            alert(e.toString());
+        } else {
+            alert(e.message)
+        }
+    }
+};
+JDActivity.prototype.msgCallPopShare = function (obj) {
+    obj.callback=callback||null;
+    try {
+        window.jdShare && jdShare.callSharePane(obj);
+    } catch (e) {
+        if (e.name === "JdShareException") {
+            alert(e.toString());
+        } else {
+            alert(e.message)
+        }
+    }
+};
+JDActivity.prototype.sendDirectShare = function (obj) {
+    obj.callback=callback||null;
+    try {
+        window.jdShare && jdShare.sendDirectShare(obj);
+    } catch (e) {
+        if (e.name === "JdShareException") {
+            alert(e.toString());
+        } else {
+            alert(e.message)
+        }
+    }
+};
+
+
+
+JDActivity.prototype.getCookie = function (name) {
     let arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
     if (arr = document.cookie.match(reg))
         return decodeURI(arr[2]);
     else
         return null;
 }
-JDActivity.prototype.babelAwardCollection = function (activityId,moduleId,callback,error) {
+JDActivity.prototype.babelAwardCollection = function (activityId, moduleId, callback, error) {
 
     let url = '//h5.m.jd.com/h5api.jsp';
     let data = {};
-    let activity={activityId:activityId,moduleId:moduleId};
+    let activity = {activityId: activityId, moduleId: moduleId};
     data.functionid = 'babelAwardCollection';
-    data.client='wh5'
-    data.clientVersion='1.0.0';
-    data.body=JSON.stringify(activity);
-    data.sid=this.getCookie('sid')||this.sid;
-    if(!data.sid){
+    data.client = 'wh5'
+    data.clientVersion = '1.0.0';
+    data.body = JSON.stringify(activity);
+    data.sid = this.getCookie('sid') || this.sid;
+    if (!data.sid) {
         console.log('>>无法读取cookie中的sid,测试请填写测试sid')
     }
 
     $.ajax({
-        url:url,
-        type:'get',
-        data:data,
+        url: url,
+        type: 'get',
+        data: data,
         dataType: "jsonp",
-        jsonpCallback:"getResult",//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名，也可以不写这个参数，jQuery会自动为你处理数据
-        success: callback||function (data) {
+        jsonpCallback: "getResult",//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名，也可以不写这个参数，jQuery会自动为你处理数据
+        success: callback || function (data) {
         },
-        error: error||function(){
+        error: error || function () {
         }
     });
 
@@ -48,18 +95,17 @@ JDActivity.prototype.babelAwardCollection = function (activityId,moduleId,callba
 };
 
 
-
-JDActivity.prototype.newBabelAwardCollection=function (award,callback,error) {
+JDActivity.prototype.newBabelAwardCollection = function (award, callback, error) {
     $.ajax({
         url: '//api.m.jd.com/client.action',
         dataType: 'jsonp',
-        jsonpCallback:"drawCallback",
+        jsonpCallback: "drawCallback",
         data: {
             functionId: 'newBabelAwardCollection',
             client: 'wh5',
             clientVersion: '1.0.0',
-            'sid': this.getCookie('sid')||this.config.sid,
-            'uuid': this.getCookie('uuid')||this.config.uuid,
+            'sid': this.getCookie('sid') || this.config.sid,
+            'uuid': this.getCookie('uuid') || this.config.uuid,
 
             body: JSON.stringify({
                 'activityId': award.activityId,
@@ -67,10 +113,12 @@ JDActivity.prototype.newBabelAwardCollection=function (award,callback,error) {
                 'args': 'key=' + award.key + ',roleId=' + award.roleId + ',to=' + award.to
             })
         },
-        success:callback||function (data) {},
-        error: error||function(){}
+        success: callback || function (data) {
+        },
+        error: error || function () {
+        }
     })
 }
 
 
-window.JDActivity=module.exports = JDActivity;
+window.JDActivity = module.exports = JDActivity;

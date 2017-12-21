@@ -11,6 +11,8 @@
 </head>
 <body id="app">
 
+<div id="share_btn" channels="Wxfriends,Wxmoments,Sinaweibo">Share</div>
+
 <script>
     var activityID = 'TbpTJEmLfV4vTRE9SLU5ojPFvmv';
     function callback(obj) {
@@ -30,18 +32,46 @@
             };
 
 
-    //类型  key    roleId
 
-    //手机  暂无   暂无
-    //电脑  0065f75ec0f84947972d5d746c79b422   9380662
-    //数码  9a8d48a8e0fb4759a16773eae6c208c0   9381670
-    //图书  eae983506795449798bf77aba99f92a1   8522473
-    //生旅  c3ca887e4b354555b5df3ead016e9ccd   9639233
-    //办公  暂无   暂无
 
     jda.newBabelAwardCollection(drawData, callback);
+
+
+    //设置微信分享，在 *.jd.com 域名下可用
+
+    jda.wechatShareInit({
+        img: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/pages/211711/img/share.jpg',
+        url: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/index.html',
+        desc: '神秘吃鸡补给箱已落地，内有惊喜，等你开启！',
+        title: '注意，前方空投补给箱！'
+    });
+
+    $('#share_btn').click(function () {
+        var $this = $(this);
+        var channels = $this.attr('channels');
+        jda.msgCallPopShare({
+                title: '注意，前方空投补给箱！',
+                content: '神秘吃鸡补给箱已落地，内有惊喜，等你开启！',
+                url: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/index.html',
+                img: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/pages/211711/img/share.jpg',
+                channel: 'Wxfriends,Wxmoments,Sinaweibo',
+            }
+        );
+    })
+
+
+
+
 
 
 </script>
 </body>
 </html>
+<!--//类型  key    roleId-->
+
+<!--//手机  5b67e6a7db364ae8bac4243ec381dd52   9404773-->
+<!--//电脑  0065f75ec0f84947972d5d746c79b422   9380662-->
+<!--//数码  9a8d48a8e0fb4759a16773eae6c208c0   9381670-->
+<!--//图书  eae983506795449798bf77aba99f92a1   8522473-->
+<!--//生旅  c3ca887e4b354555b5df3ead016e9ccd   9639233-->
+<!--//办公  eddcc89e90454b2d927a7fc30771442e   9416873-->

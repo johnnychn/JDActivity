@@ -1,0 +1,35 @@
+{
+  "name": "@jmfe/jm-jdshare",
+  "version": "1.4.1",
+  "description": "京东无线分享组件",
+  "main": "lib/jdShare.js",
+  "files": [
+    "lib/",
+    "example/"
+  ],
+  "directories": {
+    "doc": "doc",
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "H5",
+    "openApp",
+    "分享"
+  ],
+  "author": "Zeng Tong <cengtong@jd.com>",
+  "maintainers": [
+    "zhao Yue <zhaoyue3@jd.com>",
+    "Cai Sen Lei <caisenlei@jd.com>",
+    "Yu Hong Liang <yuhongliang@jd.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@git.jd.com:jmfe-packages/jm-jdshare.git"
+  },
+  "license": "MIT",
+  "_from": "@jmfe/jm-jdshare@1.4.1",
+  "_resolved": "http://registry.m.jd.com/@jmfe/jm-jdshare/download/@jmfe/jm-jdshare-1.4.1.tgz"
+}

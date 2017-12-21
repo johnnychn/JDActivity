@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <style>
+        h4 {
+            margin-top: 50px;
+        }
+
+        select {
+            height: 45px;
+        }
+
+        option {
+            height: 45px;
+        }
+
+        .btn {
+            margin-bottom: 10px;
+        }
+        label.checkbox{padding: 10px 0;}
+    </style>
+    <title>app5.0分享协议</title>
+</head>
+<body>
+<div id="log"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>设置APP右上角分享内容</h4>
+
+            <p>
+                <a href="javascript:;" class="btn btn-info btn-lg setShareInfo"> 设置 </a>
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>唤起分享面板</h4>
+
+            <p>
+                <a href="javascript:;" class="btn btn-info btn-lg callSharePanel" channels="">默认全部</a>
+                <a href="javascript:;" class="btn btn-info btn-lg callSharePanel"
+                   channels="Wxfriends,Wxmoments,Sinaweibo">wx好友,wx朋友圈,微博</a>
+                <a href="javascript:;" class="btn btn-info btn-lg callSharePanel" channels="QQfriends,QQzone,CopyURL">QQ好友,QQzone,CopyURL</a>
+            </p>
+            <form style="margin:10px 26px;">
+                <fieldset>
+                    <label class="checkbox">
+                      <input value="Wxfriends" name="wx" type="checkbox">微信好友
+                    </label>
+                    <label class="checkbox">
+                      <input value="Wxmoments" name="wx" type="checkbox">微信朋友圈
+                    </label>
+                    <label class="checkbox">
+                      <input value="Sinaweibo" name="wx" type="checkbox">新浪微博
+                    </label>
+                    <label class="checkbox">
+                      <input value="QQfriends" name="wx" type="checkbox">QQ好友
+                    </label>
+                    <label class="checkbox">
+                      <input value="QQzone" name="wx" type="checkbox">QQ空间
+                    </label>
+                    <label class="checkbox">
+                      <input value="CopyURL" name="wx" type="checkbox">复制链接
+                    </label>
+                    <label class="checkbox">
+                        <input value="Moreshare" name="wx" type="checkbox">更多
+                    </label>
+                <p> <a id="btn" href="javascript:;" class="btn btn-info btn-lg "> 提交 </a></p>
+                </fieldset>
+            </form>   
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>直接分享</h4>
+
+            <p>
+                <a href="javascript:;" class="btn btn-info btn-lg callShareDirectly" channel="Wxfriends">微信好友</a>
+                <a href="javascript:;" class="btn btn-info btn-lg callShareDirectly" channel="Wxmoments">微信朋友圈</a>
+                <a href="javascript:;" class="btn btn-info btn-lg callShareDirectly" class="callShareDirectly"
+                   channel="Sinaweibo">微博</a>
+                <a href="javascript:;" class="btn btn-info btn-lg callShareDirectly" channel="QQfriends">QQ好友</a>
+                <a href="javascript:;" class="btn btn-info btn-lg callShareDirectly" channel="QQzone">QQ空间</a>
+                <a href="javascript:;" class="btn btn-info btn-lg callShareDirectly" channel="CopyURL">复制链接</a>
+            </p>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="js/zepto.js"></script>
+<script>
+
+    var os = function () {
+        var device = '';
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf('iphone') != -1) {
+            device = 'iphone';
+        } else if (ua.indexOf('android') != -1) {
+            device = 'android';
+        } else if (ua.indexOf('ipad') != -1) {
+            device = 'ipad';
+        }
+        return device;
+    }();
+
+    window.jdappShareRes = function (result) {
+        //alert('done');
+        //alert('0成功,1失败,2取消\n result:' + result.shareResult + ' | channel:' + result.shareChannel);
+//        setTimeout(function(){
+//            alert('done');
+//        },0);
+        document.body.style.backgroundColor = '#e1e1e1';
+        document.querySelector('#log').innerHTML = '0成功,1失败,2取消\n result:' + result.shareResult + ' | channel:' + result.shareChannel;
+    };
+
+    $('.setShareInfo').click(function () {
+        var channel = '';
+        if (os == 'iphone') {
+            location = 'openApp.jdmobile://virtual?params={"category":"jump","des":"share","type":"111","title":"分享的标题","content":"分享的内容","shareUrl":"http://h5beta.m.jd.com/test/apptest.html","imageUrl":"http://jcode.jd.com/misc/skin/2015/i/shareicon.png","iconUrl":"http://jcode.jd.com/misc/skin/2015/i/shareicon.png","channel":"' + channel + '","isCallBack":"Y","shareActionType":"S"}';
+        } else if (os == 'android') {
+            shareHelper.initShare(JSON.stringify({
+                "shareUrl": "http://h5beta.m.jd.com/test/apptest.html",
+                "iconUrl": "http://misc.360buyimg.com/lib/img/e/logo-201305.png",
+                "title": "M页调用分享模块标题",
+                "content": "内容详情",
+                "shareActionType": "S",
+                "channel": channel,
+                "callback": "Y",
+                "eventId": ""
+            }));
+        }
+
+
+    });
+
+    $('.callSharePanel').click(function () {
+        var $this = $(this);
+        var channels = $this.attr('channels');
+
+        if (os == 'iphone') {
+
+            location = 'openApp.jdmobile://virtual?params={"category":"jump","des":"share","type":"111","title":"分享的标题","content":"分享的内容","shareUrl":"http://h5beta.m.jd.com/test/apptest.html","imageUrl":"http://jcode.jd.com/misc/skin/2015/i/shareicon.png","iconUrl":"http://jcode.jd.com/misc/skin/2015/i/shareicon.png","channel":"' + channels + '","isCallBack":"Y","shareActionType":"P"}';
+
+        } else if (os == 'android') {
+
+            shareParam = JSON.stringify({
+                "shareUrl": "http://h5beta.m.jd.com/test/apptest.html",
+                "iconUrl": "http://misc.360buyimg.com/lib/img/e/logo-201305.png",
+                "title": "M页调用分享模块标题",
+                "content": "内容详情",
+                "shareActionType": "P",
+                "channel": channels,
+                "callback": "Y",
+                "eventId": ""
+            });
+            shareHelper.initShare(shareParam);
+
+        }
+//
+
+
+    });
+
+
+    (function(){
+        var $boxs=$("input[name=wx]");
+        var channels=[];
+        $("#btn").on("click",function(){
+           channels=[];
+           $boxs.each(function(){
+               if(this.checked){
+                    channels.push($(this).attr("value"));
+               }
+           });
+
+           channels=channels.join(",");
+           console.log(channels);
+           if (os == 'iphone') {
+
+                location = 'openApp.jdmobile://virtual?params={"category":"jump","des":"share","type":"111","title":"分享的标题","content":"分享的内容","shareUrl":"http://h5beta.m.jd.com/test/apptest.html","imageUrl":"http://jcode.jd.com/misc/skin/2015/i/shareicon.png","iconUrl":"http://jcode.jd.com/misc/skin/2015/i/shareicon.png","channel":"' + channels + '","isCallBack":"Y","shareActionType":"P"}';
+
+            } else if (os == 'android') {
+
+                //alert(typeof shareHelper.setShareInfo);
+                shareParam = JSON.stringify({
+                    "shareUrl": "http://h5beta.m.jd.com/test/apptest.html",
+                    "iconUrl": "http://misc.360buyimg.com/lib/img/e/logo-201305.png",
+                    "title": "M页调用分享模块标题",
+                    "content": "内容详情",
+                    "shareActionType": "P",
+                    "channel": channels,
+                    "callback": "Y",
+                    "eventId": ""
+                });
+                shareHelper.initShare(shareParam);
+
+            }
+            return false;
+        });
+    })();
+
+
+
+
+    $('.callShareDirectly').click(function () {
+
+        var $this = $(this);
+        var channel = $this.attr('channel');
+        if (channel) {
+
+            if (os == 'iphone') {
+
+                location = 'openApp.jdmobile://virtual?params={"category":"jump","des":"share","type":"111","title":"分享的标题","content":"分享的内容","shareUrl":"http://h5beta.m.jd.com/test/apptest.html","imageUrl":"http://jcode.jd.com/misc/skin/2015/i/shareicon.png","iconUrl":"http://jcode.jd.com/misc/skin/2015/i/shareicon.png","channel":"' + channel + '","isCallBack":"Y","shareActionType":"O"}';
+
+            } else if (os == 'android') {
+                shareHelper.initShare(JSON.stringify({
+                    "shareUrl": "http://h5beta.m.jd.com/test/apptest.html",
+                    "iconUrl": "http://misc.360buyimg.com/lib/img/e/logo-201305.png",
+                    "title": "M页调用分享模块标题",
+                    "content": "内容详情",
+                    "shareActionType": "O",
+                    "channel": channel,
+                    "callback": "Y",
+                    "eventId": ""
+                }));
+            }
+
+//
+        } else {
+            alert('缺少频道参数');
+        }
+
+    });
+</script>
+</body>
+</html>

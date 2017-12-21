@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>M页内调用分享测试</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+
+    <style>
+        h4 {
+            margin-top: 50px;
+        }
+
+        select {
+            height: 45px;
+        }
+
+        option {
+            height: 45px;
+        }
+
+        #msgbox {
+            position: fixed;
+            width: 45%;
+            height: 100%;
+            top: 0%;
+            left: 55%;
+            background-color: #d5d5d5;
+            font-size: 10px;
+            overflow-wrap: break-word;
+            color: red;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<div id="msgbox">
+
+</div>
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>下发APP右上角分享内容---不带回调</h4>
+            <a href="javascript:;" class="btn btn-info btn-lg" id="setShareInfo"> 下发 </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>下发APP右上角分享内容---带回调</h4>
+            <a href="javascript:;" class="btn btn-info btn-lg" id="setShareInfoCallback"> 下发 </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>呼出分享弹框---无回调</h4>
+            <!--<select name="" id="androidOpenAppChannel">
+                <option value=""></option>
+                <option value="Wxfriends">Wxfriends</option>
+                <option value="Wxmoments">Wxmoments</option>
+                <option value="Sinaweibo">Sinaweibo</option>
+                <option value="QQfriends">QQfriends</option>
+                <option value="QQzone">QQzone</option>
+                <option value="Moreshare">Moreshare</option>
+            </select>-->
+            <a href="javascript:;" class="btn btn-info btn-lg" id="msgCallPopShare"> 分享 </a>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>呼出分享弹框---带回调</h4>
+            <!--<select name="" id="androidOpenAppChannel">
+                <option value=""></option>
+                <option value="Wxfriends">Wxfriends</option>
+                <option value="Wxmoments">Wxmoments</option>
+                <option value="Sinaweibo">Sinaweibo</option>
+                <option value="QQfriends">QQfriends</option>
+                <option value="QQzone">QQzone</option>
+                <option value="Moreshare">Moreshare</option>
+            </select>-->
+            <a href="javascript:;" class="btn btn-info btn-lg" id="msgCallPopShareCallback"> 分享 </a>
+
+        </div>
+    </div>
+    <!--
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>直接唤起分享弹框</h4>
+                <a href="javascript:;" class="btn btn-info btn-lg" id="callPopShare"> 分享 </a>
+            </div>
+        </div>
+        -->
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>直接分享出去---不带回调</h4>
+
+            <select name="" id="sendShareChannel">
+                <option value="Wxfriends">Wxfriends</option>
+                <option value="Wxmoments">Wxmoments</option>
+                <option value="Sinaweibo">Sinaweibo</option>
+                <option value="QQfriends">QQfriends</option>
+                <option value="QQzone">QQzone</option>
+                <option value="Moreshare">Moreshare</option>
+            </select>
+            <a href="javascript:;" class="btn btn-info btn-lg" id="sendShare"> 分享 </a>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>直接分享出去---带回调</h4>
+
+            <select name="" id="sendShareChannelCallback">
+                <option value="Wxfriends">Wxfriends</option>
+                <option value="Wxmoments">Wxmoments</option>
+                <option value="Sinaweibo">Sinaweibo</option>
+                <option value="QQfriends">QQfriends</option>
+                <option value="QQzone">QQzone</option>
+                <option value="Moreshare">Moreshare</option>
+            </select>
+            <a href="javascript:;" class="btn btn-info btn-lg" id="sendShareCallback"> 分享 </a>
+
+        </div>
+    </div>
+
+    <!--<div class="row">
+        <div class="col-xs-12">
+            <h4>IOS呼出分享弹框</h4>
+            <a href="javascript:;" class="btn btn-info btn-lg" id="iosCallSharePane"> 分享 </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>IOS直接分享</h4>
+
+            <select name="" id="ioschannel">
+                <option value="Wxfriends">Wxfriends</option>
+                <option value="Wxmoments">Wxmoments</option>
+                <option value="Sinaweibo">Sinaweibo</option>
+                <option value="QQfriends">QQfriends</option>
+                <option value="QQzone">QQzone</option>
+                <option value="Moreshare">Moreshare</option>
+            </select>
+            <a href="javascript:;" class="btn btn-info btn-lg" id="IOSSendShare"> 分享 </a>
+        </div>
+    </div>-->
+
+
+</div>
+
+
+<script src="js/zepto.js"></script>
+<script src="js/jdShare.js"></script>
+
+
+<script>
+
+    /*try {
+     jdShare.setShareInfo({
+     title: '京东超市，天天低价抢购！',
+     content: '每日京喜好货，都在京东超市天天抢购！早市、午市、晚市，三个时段，不让品质低价偷偷溜走！',
+     url: 'http://h5.m.jd.com/active/rushbuying/index.html',
+     img: 'http://m.360buyimg.com/n1/s120x120_jfs/t2566/341/1119128176/23675/6356333b/568e3d86Naa36a750.jpg',
+     channel: 'Wxfriends,Wxmoments,Sinaweibo',
+     callback: null  // 不要依赖回调，不要在回调中加入业务逻辑，不要在回调中处理耗时的操作
+     });
+     }catch (e){
+     alert(e.message)
+     }*/
+
+
+    function addMsg(msg) {
+        var text = $("<p>" + msg + "</p>");
+        $("#msgbox").append(text);
+    }
+
+
+    function cb(result) {
+        //alert("自定义回调：" + JSON.stringify(result));
+        addMsg(new Date().toLocaleString() + "\n" + JSON.stringify(result));
+
+    }
+
+
+    $("#setShareInfo").on('click', function () {
+        try {
+            window.jdShare && jdShare.setShareInfo({
+                title: '京东超市，天天低价抢购！',
+                content: '每日京喜好货，都在京东超市天天抢购！早市、午市、晚市，三个时段，不让品质低价偷偷溜走！',
+                url: 'http://h5.m.jd.com/active/rushbuying/index.html',
+                img: 'http://m.360buyimg.com/n1/s120x120_jfs/t2566/341/1119128176/23675/6356333b/568e3d86Naa36a750.jpg',
+                channel: '',
+                callback: null  // 不要依赖回调，不要在回调中加入业务逻辑，不要在回调中处理耗时的操作
+            });
+        } catch (e) {
+            if (e.name === "JdShareException") {
+                alert(e.toString());
+            } else {
+                alert(e.message)
+            }
+        }
+    })
+
+    $("#setShareInfoCallback").on('click', function () {
+        //方法中不配置则默认带回调
+        try {
+            window.jdShare && jdShare.setShareInfo({
+                title: '京东超市，天天低价抢购！',
+                content: '每日京喜好货，都在京东超市天天抢购！早市、午市、晚市，三个时段，不让品质低价偷偷溜走！',
+                url: 'http://h5.m.jd.com/active/rushbuying/index.html',
+                img: 'http://m.360buyimg.com/n1/s120x120_jfs/t2566/341/1119128176/23675/6356333b/568e3d86Naa36a750.jpg',
+                channel: 'Wxfriends,Wxmoments,Sinaweibo',
+                callback: cb  // 不要依赖回调，不要在回调中加入业务逻辑，不要在回调中处理耗时的操作
+            });
+        } catch (e) {
+            if (e.name === "JdShareException") {
+                alert(e.toString());
+            } else {
+                alert(e.message)
+            }
+        }
+    })
+
+    $("#msgCallPopShare").on('click', function () {
+
+        //在方法里的回调开关优先级最高，对象中是不带回调，但方法中带回调，则最后带回调
+        try {
+            window.jdShare && jdShare.callSharePane({
+                title: '京东超市，天天低价抢购！',
+                content: '每日京喜好货，都在京东超市天天抢购！早市、午市、晚市，三个时段，不让品质低价偷偷溜走！',
+                url: 'http://h5.m.jd.com/active/rushbuying/index.html',
+                img: 'http://m.360buyimg.com/n1/s120x120_jfs/t2566/341/1119128176/23675/6356333b/568e3d86Naa36a750.jpg',
+                channel: '',
+                callback: null  // 不要依赖回调，不要在回调中加入业务逻辑，不要在回调中处理耗时的操作
+            });
+        } catch (e) {
+            if (e.name === "JdShareException") {
+                alert(e.toString());
+            } else {
+                alert(e.message)
+            }
+        }
+    });
+
+    $("#msgCallPopShareCallback").on('click', function () {
+        try {
+            window.jdShare && jdShare.callSharePane({
+                title: '京东超市，天天低价抢购！',
+                content: '每日京喜好货，都在京东超市天天抢购！早市、午市、晚市，三个时段，不让品质低价偷偷溜走！',
+                url: 'http://h5.m.jd.com/active/rushbuying/index.html',
+                img: 'http://m.360buyimg.com/n1/s120x120_jfs/t2566/341/1119128176/23675/6356333b/568e3d86Naa36a750.jpg',
+                channel: 'Wxfriends,Wxmoments,Sinaweibo',
+                callback: cb  // 不要依赖回调，不要在回调中加入业务逻辑，不要在回调中处理耗时的操作
+            });
+        } catch (e) {
+            alert(e.message);
+        }
+    });
+    $("#sendShare").on('click', function () {
+        try {
+            window.jdShare && jdShare.sendDirectShare({
+                title: '京东超市，天天低价抢购！',
+                content: '每日京喜好货，都在京东超市天天抢购！早市、午市、晚市，三个时段，不让品质低价偷偷溜走！',
+                url: 'http://h5.m.jd.com/active/rushbuying/index.html',
+                img: 'http://m.360buyimg.com/n1/s120x120_jfs/t2566/341/1119128176/23675/6356333b/568e3d86Naa36a750.jpg',
+                channel: $("#sendShareChannel").val(),
+                callback: null  // 不要依赖回调，不要在回调中加入业务逻辑，不要在回调中处理耗时的操作
+            });
+        } catch (e) {
+            alert(e.message);
+        }
+    });
+
+    $("#sendShareCallback").on('click', function () {
+        try {
+            window.jdShare && jdShare.sendDirectShare({
+                title: '京东超市，天天低价抢购！',
+                content: '每日京喜好货，都在京东超市天天抢购！早市、午市、晚市，三个时段，不让品质低价偷偷溜走！',
+                url: 'http://h5.m.jd.com/active/rushbuying/index.html',
+                img: 'http://m.360buyimg.com/n1/s120x120_jfs/t2566/341/1119128176/23675/6356333b/568e3d86Naa36a750.jpg',
+                channel: $("#sendShareChannelCallback").val(),
+                callback: cb  // 不要依赖回调，不要在回调中加入业务逻辑，不要在回调中处理耗时的操作
+            });
+        } catch (e) {
+            alert(e.message);
+        }
+    });
+</script>
+
+</body>
+</html>
