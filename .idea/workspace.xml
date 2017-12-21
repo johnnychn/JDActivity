@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3282c788-62af-42f5-9a6f-692475b122b6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/jd_activity.js" afterPath="$PROJECT_DIR$/dist/jd_activity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/jd_activity.js.map" afterPath="$PROJECT_DIR$/dist/jd_activity.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JDActivity.js" afterPath="$PROJECT_DIR$/src/JDActivity.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,7 +34,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/_@jmfe_jm-jdshare@1.4.1@@jmfe/jm-jdshare/example/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3181">
+            <state relative-caret-position="3087">
               <caret line="273" column="53" lean-forward="false" selection-start-line="273" selection-start-column="38" selection-end-line="273" selection-end-column="53" />
               <folding />
             </state>
@@ -49,6 +47,24 @@
             <state relative-caret-position="1965">
               <caret line="131" column="23" lean-forward="false" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="23" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="375">
+                <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+                <folding>
+                  <marker date="1513857093703" expanded="true" signature="94:317" ph="{&quot;activityId&quot;: activityID...}" />
+                  <marker date="1513857093703" expanded="true" signature="441:690" ph="{&quot;img&quot;: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/pages/211711/img/share.jpg'...}" />
+                  <marker date="1513857093703" expanded="true" signature="732:1206" ph="{...}" />
+                  <marker date="1513857093703" expanded="true" signature="838:1189" ph="{&quot;title&quot;: '注意，前方空投补给箱！'...}" />
+                </folding>
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -66,8 +82,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+            <state relative-caret-position="299">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -122,10 +138,11 @@
       <list>
         <option value="$PROJECT_DIR$/dist/jd_activity.js.map" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/JDActivity.js" />
         <option value="$PROJECT_DIR$/dist/jd_activity.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -177,108 +194,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="JDActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JDActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JDActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JDActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JDActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_@jmfe_jm-jdshare@1.4.1@@jmfe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jm-jdshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JDActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JDActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_@jmfe_jm-jdshare@1.4.1@@jmfe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jm-jdshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JDActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JDActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_@jmfe_jm-jdshare@1.4.1@@jmfe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jm-jdshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JDActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JDActivity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,12 +300,12 @@
       <workItem from="1513335443532" duration="7021000" />
       <workItem from="1513467738629" duration="502000" />
       <workItem from="1513468298789" duration="12617000" />
-      <workItem from="1513847824670" duration="5069000" />
+      <workItem from="1513847824670" duration="5384000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25209000" />
+    <option name="totallyTimeSpent" value="25524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="282" y="111" width="1839" height="1244" extended-state="0" />
@@ -455,7 +370,10 @@
           <first_editor relative-caret-position="555">
             <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
             <folding>
-              <marker date="1513598350660" expanded="true" signature="94:317" ph="{&quot;activityId&quot;: activityID...}" />
+              <marker date="1513857093703" expanded="true" signature="94:317" ph="{&quot;activityId&quot;: activityID...}" />
+              <marker date="1513857093703" expanded="true" signature="441:690" ph="{&quot;img&quot;: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/pages/211711/img/share.jpg'...}" />
+              <marker date="1513857093703" expanded="true" signature="732:1206" ph="{...}" />
+              <marker date="1513857093703" expanded="true" signature="838:1189" ph="{&quot;title&quot;: '注意，前方空投补给箱！'...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -520,6 +438,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -529,7 +448,10 @@
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding>
-              <marker date="1513598350660" expanded="true" signature="94:317" ph="{&quot;activityId&quot;: activityID...}" />
+              <marker date="1513857093703" expanded="true" signature="94:317" ph="{&quot;activityId&quot;: activityID...}" />
+              <marker date="1513857093703" expanded="true" signature="441:690" ph="{&quot;img&quot;: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/pages/211711/img/share.jpg'...}" />
+              <marker date="1513857093703" expanded="true" signature="732:1206" ph="{...}" />
+              <marker date="1513857093703" expanded="true" signature="838:1189" ph="{&quot;title&quot;: '注意，前方空投补给箱！'...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -571,6 +493,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -608,38 +531,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="555">
-            <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-            <folding>
-              <marker date="1513598350660" expanded="true" signature="94:317" ph="{&quot;activityId&quot;: activityID...}" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <marker date="1513598350660" expanded="true" signature="94:317" ph="{&quot;activityId&quot;: activityID...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -718,14 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="66" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/_@jmfe_jm-jdshare@1.4.1@@jmfe/jm-jdshare/lib/jdShare.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -733,22 +620,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JDActivity.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/_@jmfe_jm-jdshare@1.4.1@@jmfe/jm-jdshare/example/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3181">
-          <caret line="273" column="53" lean-forward="false" selection-start-line="273" selection-start-column="38" selection-end-line="273" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -773,14 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/_@jmfe_jm-jdshare@1.4.1@@jmfe/jm-jdshare/example/jdshare5.0.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1965">
-          <caret line="131" column="23" lean-forward="false" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/_@jmfe_jm-jdshare@1.4.1@@jmfe/jm-jdshare/example/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
@@ -797,10 +660,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JDActivity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="375">
+            <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+            <folding>
+              <marker date="1513857093703" expanded="true" signature="94:317" ph="{&quot;activityId&quot;: activityID...}" />
+              <marker date="1513857093703" expanded="true" signature="441:690" ph="{&quot;img&quot;: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/pages/211711/img/share.jpg'...}" />
+              <marker date="1513857093703" expanded="true" signature="732:1206" ph="{...}" />
+              <marker date="1513857093703" expanded="true" signature="838:1189" ph="{&quot;title&quot;: '注意，前方空投补给箱！'...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <marker date="1513857093703" expanded="true" signature="94:317" ph="{&quot;activityId&quot;: activityID...}" />
+            <marker date="1513857093703" expanded="true" signature="441:690" ph="{&quot;img&quot;: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/pages/211711/img/share.jpg'...}" />
+            <marker date="1513857093703" expanded="true" signature="732:1206" ph="{...}" />
+            <marker date="1513857093703" expanded="true" signature="838:1189" ph="{&quot;title&quot;: '注意，前方空投补给箱！'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/_@jmfe_jm-jdshare@1.4.1@@jmfe/jm-jdshare/example/jdshare5.0.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="131" column="23" lean-forward="false" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/_@jmfe_jm-jdshare@1.4.1@@jmfe/jm-jdshare/example/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3087">
+          <caret line="273" column="53" lean-forward="false" selection-start-line="273" selection-start-column="38" selection-end-line="273" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="66" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+        <state relative-caret-position="299">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding />
         </state>
       </provider>

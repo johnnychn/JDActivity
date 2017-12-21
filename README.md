@@ -13,6 +13,32 @@ var drawData = {
         to: '//h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/index.html' //项目地址
             };
 jda.newBabelAwardCollection(drawData, callback);
+
+
+
+ //设置微信分享，在 *.jd.com 域名下可用 素材要都用 https:// 谢谢
+
+    jda.wechatShareInit({
+        img: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/pages/211711/img/share.jpg',
+        url: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/index.html',
+        desc: '神秘吃鸡补给箱已落地，内有惊喜，等你开启！',
+        title: '注意，前方空投补给箱！'
+    });
+
+    $('#share_btn').click(function () {
+        var $this = $(this);
+        var channels = $this.attr('channels');
+        jda.msgCallPopShare({
+                title: '注意，前方空投补给箱！',
+                content: '神秘吃鸡补给箱已落地，内有惊喜，等你开启！',
+                url: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/index.html',
+                img: 'https://h5.m.jd.com/dev/TbpTJEmLfV4vTRE9SLU5ojPFvmv/pages/211711/img/share.jpg',
+                channel: 'Wxfriends,Wxmoments,Sinaweibo',
+            }
+        );
+    })
+
+
 ``` 
 ### Methods
 
