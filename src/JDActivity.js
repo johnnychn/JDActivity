@@ -30,7 +30,7 @@ JDActivity.prototype.setShareInfo = function (obj,callback) {
         }
     }
 };
-JDActivity.prototype.msgCallPopShare = function (obj) {
+JDActivity.prototype.msgCallPopShare = function (obj,callback) {
     obj.callback=callback||null;
     try {
         window.jdShare && jdShare.callSharePane(obj);
